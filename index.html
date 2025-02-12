@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faro Campo Elias</title>
+	<link rel="icon" href="./IMG UNO/logo.png">
+
+    <link rel="stylesheet" href="./CSS DOS/Principal_Index.css">
+    <link rel="stylesheet" href="./CSS UNO/100Days.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./CSS UNO/Carusel.css">
+    <link rel="stylesheet" href="./CSS UNO/Animacion.css">
+    <link rel="stylesheet" href="./CSS DOS/Codigo.css">
+    <link rel="stylesheet" href="./CSS DOS/Oscurovalidar.css">
+    <link rel="stylesheet" href="./CSS DOS/video.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+
+    <div id="content-oscuro-validar-codigo" class="content-oscuro-validar-codigo">
+
+        <div id="content_cerrar" class="content_cerrar">
+
+			<button id="btn_cerrar" class="btn_cerrar">
+
+				<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+					<path fill="currentColor" d="m12 13.4l-4.9 4.9q-.275.275-.7.275t-.7-.275t-.275-.7t.275-.7l4.9-4.9l-4.9-4.9q-.275-.275-.275-.7t.275-.7t.7-.275t.7.275l4.9 4.9l4.9-4.9q.275-.275.7-.275t.7.275t.275.7t-.275.7L13.4 12l4.9 4.9q.275.275.275.7t-.275.7t-.7.275t-.7-.275z"/>
+				</svg>
+
+			</button>  
+
+		</div>
+
+        <div id="content-registrar-asistencia-validar" class="content-registrar-asistencia-validar">
+
+            <span id="lbl-content-nombre-uno">Comunidad Cristiana</span>
+            <span id="lbl-content-nombre-dos">Jesús el Pan de Vida</span>
+            <span id="lbl-content-nombre-tres">¡Bienvenido, hermano(a) en Cristo! Ingrese su código de validación para continuar</span>
+
+            <div class="content_input_codigo">
+                <input type="password" id="digito1" class="digito" maxlength="1" pattern="\d">
+                <input type="password" id="digito2" class="digito" maxlength="1" pattern="\d">
+                <input type="password" id="digito3" class="digito" maxlength="1" pattern="\d">
+                <input type="password" id="digito4" class="digito" maxlength="1" pattern="\d">
+            </div>
+
+            <button id="btn-continuar" class="btn-continuar">
+                Continuar
+            </button>
+
+        </div>
+
+    </div>
+
+    <div id="content-principal" class="content-principal">
+
+        <header class="content-barra-navegacion" id="navbar">
+
+            <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+            <nav id="nav-menu" class="nav-menu">
+
+                <ul>
+                    
+                    
+                    <li><a onclick="scrollToSection('content-lema')">Lema</a></li>
+                    <li><a onclick="scrollToSection('content-portada-principal')">Portada</a></li>
+                    <li><a onclick="scrollToSection('content-vision-mision')">Misión y Visión</a></li>
+                    <li><a onclick="scrollToSection('carousel-container')">Galeria</a></li>
+
+                    <button id="btn-validar-codigo" class="btn-validar-codigo">
+                        Visitas
+                    </button>
+
+                </ul>
+
+            </nav>
+
+            <img id="img-logo" src="./IMG UNO/logo.png" alt="src">
+
+        </header>
+
+        <div id="content-lema" class="content-lema scroll-effect">
+
+            <div id="content-lema-uno" class="content-lema-uno">
+
+                <span id="lbl-content-lema-uno" class="lbl-content-lema-uno">
+                    20XXV Año de
+                </span>
+                
+                <span id="lbl-content-lema-dos" class="lbl-content-lema-dos">
+                    Restitución
+                </span>
+
+            </div>
+
+        </div>
+
+        <div id="content-portada-principal" class="content-portada-principal scroll-effect">
+
+            <div id="content-nombre" class="content-nombre">
+
+                <div id="content-nombre-lbl" class="content-nombre-lbl">
+
+                    <span id="lbl-content-nombre-uno" for="label">Comunidad Cristiana</span>
+
+                    <span id="lbl-content-nombre-dos" for="label">Jesús el Pan de Vida</span>
+
+                    <span id="lbl-content-nombre-tres" for="label">
+                        Somos una iglesia cristiana, guiada por la pasión del corazón de Dios. 
+                        Nuestro propósito es establecer un sólido fundamento bíblico en cada persona, a través de la predicación de la Palabra. 
+                        Aspiramos a inspirar en cada vida el deseo profundo de recibir la salvación y experimentar una transformación espiritual que les acerque a Dios.
+                    </span>
+
+                </div>
+    
+            </div>
+
+            <div class="frame" aria-label="Contenedor de imágenes">
+
+                <div class="pics">
+
+                    <div class="pic pic-1"><img src="./IMG UNO/uno.jpg" alt="Image 1" /></div>
+                    <div class="pic pic-2"><img src="./IMG UNO/cinco.jpg" /></div>
+                    <div class="pic pic-4"><img src="./IMG TRES/doce.jpg" /></div>
+                    <div class="pic pic-3"><img src="./IMG DOS/diez.jpg" /></div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div id="content-vision-mision" class="content-vision-mision scroll-effect">
+
+            <div id="content-mision" class="content-mision">
+
+                <div id="content-mision-lbl" class="content-mision-lbl">
+
+                    <span id="lbl-content-nombre-uno" for="label">Misión</span>
+
+                    <span id="lbl-content-nombre-tres" for="label">
+                        Somos una Iglesia dedicada a cumplir la Gran Comisión, 
+                        predicando que Jesucristo es el único Dios verdadero. 
+                        Trabajamos en la expansión de la obra en Cartagena, Colombia, 
+                        formando integralmente a nuestros ministros y feligreses, 
+                        y presentando al Señor una Iglesia Santa a través del acompañamiento espiritual y la asistencia social, 
+                        buscando la transformación del ser.
+                    </span>
+
+                </div>
+
+            </div>
+
+            <div id="content-vision" class="content-vision">
+
+                <div id="content-vision-lbl" class="content-vision-lbl" >
+
+                    <span id="lbl-content-nombre-uno" for="label">Visión</span>
+
+                    <span id="lbl-content-nombre-tres" for="label">
+                        Para este año, seremos una Iglesia reconocida a nivel nacional, 
+                        por su crecimiento continuo y su labor en la predicación del evangelio de Jesucristo. Mantendremos la unidad del Espíritu y la fe, 
+                        formando discípulos llenos del Espíritu Santo, preparados para toda buena obra, y generaremos un impacto en la transformación integral del ser, 
+                        con una alta capacidad administrativa en los procesos evangelísticos, formativos, sociales y organizacionales.
+                    </span>
+
+                </div>
+                
+            </div>
+
+        </div>
+        
+        <div id="carousel-container" class="carousel-container scroll-effect">
+
+            <span id="lbl-content-nombre-uno" for="label">Galería</span>
+
+            <button class="prev" onclick="prevSlide()">&#10094;</button>
+
+            <div class="carousel">
+
+                <img src="./IMG UNO/uno.jpg" alt="Imagen 1" class="active">
+                <img src="./IMG UNO/dos.jpg" alt="Imagen 2">
+                <img src="./IMG UNO/tres.jpg" alt="Imagen 3">
+                <img src="./IMG UNO/cuatro.jpeg" alt="Imagen 4">
+                <img src="./IMG UNO/cinco.jpg" alt="Imagen 5">
+                <img src="./IMG DOS/seis.jpg" alt="Imagen 6">
+                <img src="./IMG DOS/siete.jpg" alt="Imagen 7">
+                <img src="./IMG DOS/ocho.jpg" alt="Imagen 8">
+                <img src="./IMG DOS/nueve.jpg" alt="Imagen 9">
+                <img src="./IMG DOS/diez.jpg" alt="Imagen 10">
+                <img src="./IMG TRES/once.jpg" alt="Imagen 11">
+                <img src="./IMG TRES/doce.jpg" alt="Imagen 12">
+                <img src= "./IMG TRES/trece.jpg" alt="Imagen 13">
+                <img src="./IMG TRES/catorce.jpeg" alt="Imagen 14">
+                <img src="./IMG TRES/quince.jpg" alt="Imagen 15">
+                <img src="./IMG CUATRO/dieciseis.jpg" alt="Imagen 16">
+                <img src="./IMG CUATRO/diecisiete.jpg" alt="Imagen 17">
+                <img src="./IMG CUATRO/dieciocho.jpeg" alt="Imagen 18">
+                <img src="./IMG CUATRO/diecinueve.jpg" alt="Imagen 19">
+                <img src="./IMG CUATRO/veinte.png" alt="Imagen 20">
+
+            </div>
+
+            <button class="next" onclick="nextSlide()">&#10095;</button>
+
+        </div>
+
+        <div id="content-referencia" class="content-referencia">
+
+            <div id="content-referencia-uno" class="content-referencia-uno scroll-effect">
+
+                <div id="content-informacion" class="content-informacion">
+
+                    <div id="content-lbl-informacion" class="content-lbl-informacion">
+                        
+                        <span class="I">Información</span>
+
+                    </div>
+
+                    <div id="content-ubicacion" class="content-ubicacion">
+
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="#c4941d" d="M12 12q.825 0 1.413-.587T14 10t-.587-1.412T12 8t-1.412.588T10 10t.588 1.413T12 12m0 10q-4.025-3.425-6.012-6.362T4 10.2q0-3.75 2.413-5.975T12 2t5.588 2.225T20 10.2q0 2.5-1.987 5.438T12 22"/></svg>
+                        <span class="U">Cerros de Albornoz, Sector Campo Elías, Provincia de Cartagena, Bolívar</span>
+
+                    </div>
+
+                    <div id="content-tiempo" class="content-tiempo">
+
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="#c4941d" d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10s-4.477 10-10 10m1-10V7h-2v7h6v-2z"/></svg>
+                        <span class="U">Miércoles - Viernes 6:30pm - Domingo 8:30am</span>
+
+                    </div>
+
+                </div>
+    
+                <div id="content-iglesia" class="content-iglesia">
+
+                    <div id="content-lbl-iglesia" class="content-lbl-iglesia">
+
+                        <span class="I">Comunidad</span>
+
+                    </div>
+
+                    <div id="content-nombre-iglesia" class="content-nombre-iglesia">
+
+                        <img src="./IMG UNO/logo.png" alt="src" class="img-logo">
+                        <span class="U">Comunidad Cristiana Jesús el Pan de Vida</span>
+
+                    </div>
+    
+                </div>
+
+            </div>
+
+        </div>
+
+        <div id="content-derechos-autor" class="content-derechos-autor">
+
+            <div id="content-nombre-derecho-autor" class="content-nombre-derecho-autor">
+
+                <span class="I">
+                    © Jesús el Pan de Vida 2025 – Derechos Reservados
+                </span>
+
+            </div>
+
+            <div id="content-seguir" class="content-seguir">
+
+                <span class="I">
+                    Suigenos en: 
+                </span>
+
+                <div id="content-seguir-uno" class="content-seguir-uno">
+
+                    <!-- Solo iconos de redes sociales con color negro -->
+                    <a href="https://www.instagram.com/jesu_spandevida?igsh=MWpueWk0azEydDcyaA==" target="_blank" aria-label="Ir a Instagram">
+                        <button class="social-button">
+                            <i class="fab fa-instagram"></i>
+                        </button>
+                    </a>
+                    
+                    <a href="https://www.facebook.com/profile.php?id=100010063061944" target="_blank" aria-label="Ir a Facebook">
+                        <button class="social-button">
+                            <i class="fab fa-facebook-f"></i>
+                        </button>
+                    </a>
+                
+                    <!-- Nuevo ícono de Gmail para enviar correo -->
+                    <a href="mailto:farocampoelias20@gmail.com?subject=Asunto del mensaje" target="_blank" aria-label="Enviar un correo">
+                        <button class="social-button">
+                            <i class="fab fa-google"></i> <!-- Icono de Gmail -->
+                        </button>
+                    </a>
+
+                </div>
+    
+            </div>
+
+        </div>
+
+        <button id="btn-subir" onclick="scrollToTop()">
+            <svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M11 20V7.825l-5.6 5.6L4 12l8-8l8 8l-1.4 1.425l-5.6-5.6V20z"/></svg>
+        </button>
+
+    </div>
+
+    
+    <script src="./JS/Principal_Index.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./JS/100Days.js"></script>
+    <script src="./JS/Carrusel.js"></script>
+    <script src="./JS/Animacion.js"></script>
+    <script src="./JS/Codigo.js"></script>
+    <script src="./JS/Oscurovalidar.js"></script>
+
+</body>
+</html>
