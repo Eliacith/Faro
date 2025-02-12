@@ -1,0 +1,640 @@
+:root {
+    --color-primario: #c4941d;
+    --color-secundario: #c8c699;
+    --color-terciario: #ffffff;
+    --color-cuarto: #f3f3f381;
+    --color-quinto: #000;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #0017ff03;
+    font-family: serif, Tahoma;
+    min-height: 100vh;
+    text-rendering: optimizespeed;
+    line-height: 1.5;
+    overflow-x:visible;
+
+}
+
+.content-principal{
+    width: 100%;
+    height: auto;
+    background-color: transparent;
+    display: grid;
+    gap: 5svh;
+
+    .content-barra-navegacion {
+        width: 100%;
+        height: 10%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        transition: box-shadow 0.3s, background-color 0.3s;
+        z-index: 900;
+
+        #img-logo{
+            width: 7vh;
+            height: 7vh;
+            position: fixed;
+            top: 1.3%;
+            right: 2%;
+        }
+
+        .nav-menu{
+
+            .btn-validar-codigo{
+                width: auto;
+                height: auto;
+                background-color: var(--color-primario);
+                color: var(--color-terciario);
+                border: none;
+                cursor: pointer;
+                font-size: 2svh;
+                padding: 10px 50px 10px 50px;
+                border-radius: 50px;
+                transition: background-color 0.3s, transform 0.3s;
+            }
+    
+            .btn-validar-codigo:hover {
+                background-color: #a37709;  /* Nuevo color de fondo cuando pasas el mouse */
+                transform: scale(1.1);  /* Aumenta ligeramente el tamaño del botón */
+            }
+        }
+
+    }
+
+    .content-barra-navegacion.shadow {
+        box-shadow: 0 15px 20px -15px rgba(0, 0, 0, 0.3);
+        background-color: rgba(255, 255, 255, 0.9);
+    }
+
+    .content-barra-navegacion ul {
+        width: 100%;
+        display: flex;
+        list-style: none;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 20px;
+        gap: 100px;
+    }
+
+    .content-barra-navegacion ul li a {
+        color: black;
+        text-decoration: none;
+        font-size: 2svh;
+        cursor: pointer;
+        transition: color 0.3s;
+    }
+
+    .content-barra-navegacion ul li a:hover {
+        color: var(--color-primario);
+    }
+
+    /* Botón de menú (para dispositivos pequeños) */
+    .menu-btn {
+        display: none;
+        font-size: 24px;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    @media (max-width: 1200px) {
+        .menu-btn {
+            display: block;
+            position: absolute;
+            left: 20px;
+        }
+        
+        .content-barra-navegacion nav {
+            display: none;
+            background-color: rgba(255, 255, 255, 0.9);
+            position: absolute;
+            top: 100%;
+            width: 100%;
+            left: 0;
+            box-shadow: 0 15px 20px -15px rgba(0, 0, 0, 0.3);
+        }
+        
+        .content-barra-navegacion nav.active {
+            display: flex;
+        }
+        
+        .content-barra-navegacion ul {
+            align-items: center;
+            gap: 30px;
+        }
+    }
+
+    section {
+        padding: 100px 20px;
+        background: var(--color-terciario);
+        margin: 80px auto 20px;
+        width: 80%;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        min-height: 100vh;
+    }
+
+    .content-lema{
+        width: 100%; /* El contenedor ocupa todo el ancho disponible */
+        height: 100vh; /* Ocupa toda la altura de la ventana */
+        display: flex; /* Usamos flexbox para alinear el contenido */
+        justify-content: center; /* Centra horizontalmente el contenido dentro del contenedor */
+        align-items: center; /* Centra verticalmente el contenido dentro del contenedor */
+        background-image: url('https://images.unsplash.com/photo-1573828718637-233537e3b9e2?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+        background-size: cover; /* La imagen de fondo cubrirá todo el área sin distorsionarse */
+        background-position: center; /* Centra la imagen de fondo dentro del contenedor */
+        background-repeat: no-repeat; /* Evita que la imagen se repita */
+        
+        .content-lema-uno{
+            width: 100%;
+            height: auto;
+            margin: 20px;
+            background-color: transparent;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+
+
+            .lbl-content-lema-uno{
+                width: auto;
+                font-size: 12vw;
+                font-weight: 600;
+                text-align: center;
+            }
+
+            .lbl-content-lema-dos{
+                font-size: 13vw;
+                font-weight: 600;
+                text-align: center;
+                color: var(--color-primario);
+            }
+
+        }
+    }
+
+    
+    .content-portada-principal {
+        width: 100%;
+        background-color: transparent;
+
+        .content-nombre {
+            display: grid;
+            align-items: center;
+        }
+    
+        .content-fotos {
+            background-color: var(--color-cuarto);
+        }
+    }
+
+    .content-vision-mision {
+        width: 100%;
+        height: auto;
+        background-color: transparent;
+
+        .content-mision {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: transparent;
+
+            .content-mision-lbl {
+                display: grid;
+                justify-items: center;
+                align-content: center;
+                background-color: var(--color-cuarto);
+                margin: 20px;
+                gap: 20px;
+
+                #lbl-content-nombre-uno {
+                    color: var(--color-primario);
+                    font-size: 4vh;
+                    padding: 0px 30px 0px 30px;
+                }
+
+                #lbl-content-nombre-tres {
+                    width: 80%;
+                    color: var(--color-quinto);
+                    font-size: 2svh;
+                    word-wrap: break-word;
+                    text-align: center;
+                    font-style: italic;
+                }
+            }
+        }
+
+        .content-vision {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: transparent;
+
+            .content-vision-lbl {
+                display: grid;
+                justify-items: center;
+                align-content: center;
+                background-color: var(--color-cuarto);
+                margin: 20px;
+                gap: 20px;
+
+                #lbl-content-nombre-uno {
+                    color: var(--color-primario);
+                    font-size: 4vh;
+                    padding: 0px 30px 0px 30px;
+                }
+
+                #lbl-content-nombre-tres {
+                    width: 80%;
+                    color: var(--color-quinto);
+                    font-size: 2svh;
+                    word-wrap: break-word;
+                    text-align: center;
+                    font-style: italic;
+                }
+            }
+        }
+        
+    }
+
+    .content-referencia{
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        background-color: transparent;
+
+        .content-referencia-uno{
+            height: auto;
+            background-color: transparent;
+            gap: 5vh;
+            margin: 20px;
+
+            .content-informacion{
+                width: 100%;
+                height: auto;
+                background-color: transparent;
+                display: grid;
+                gap: 20px;
+
+                .content-lbl-informacion{
+                    display: flex;
+                    align-items: center;
+
+                    .I{
+                        color: var(--color-primario);
+                        font-size: 3vh;
+                        text-align: center;
+                        padding: 0px 30px 0px 30px;
+                    }
+                }
+
+                .content-ubicacion{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    gap: 10px;
+
+                    .U{
+                        width: 75%;
+                        color: var(--color-quinto);
+                        font-size: 2svh;
+                        word-wrap: break-word;
+                    }
+
+                    svg{
+                        width: 4vh;
+                        height: 4vh;
+                    }
+                }
+
+                .content-tiempo{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    gap: 10px;
+
+                    .U{
+                        width: 75%;
+                        color: var(--color-quinto);
+                        font-size: 2svh;
+                        word-wrap: break-word;
+                    }
+
+                    svg{
+                        width: 4vh;
+                        height: 4vh;
+                    }
+
+                }
+
+            }
+
+            .content-iglesia{
+                width: 100%;
+                height: auto;
+                background-color: transparent;
+                display: grid;
+                align-content: center;
+                gap: 20px;
+
+                .content-lbl-iglesia{
+                    display: flex;
+                    align-items: center;
+
+                    .I{
+                        color: var(--color-primario);
+                        font-size: 3vh;
+                        text-align: center;
+                        padding: 0px 30px 0px 30px;
+                    }
+                }
+
+                .content-nombre-iglesia{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    gap: 10px;
+
+                    .U{
+                        width: 75%;
+                        color: var(--color-quinto);
+                        font-size: 2svh;
+                        word-wrap: break-word;
+                    }
+
+                    .img-logo{
+                        width: 4vh;
+                        height: 4vh;
+                    }
+                }
+            }
+
+        }
+    }
+
+    .content-derechos-autor{
+        width: 100%;
+        height: 100%;
+        background-color: var(--color-cuarto);
+        display: flex;
+        align-items: center;
+        align-content: center;
+        flex-direction: column;
+
+        .content-nombre-derecho-autor{
+            width: 100%;
+            height: 100px;
+            display: flex;
+            margin: 20px;
+            justify-content: center;
+            align-items: center;
+
+            .I{
+                color: var(--color-quinto);
+                font-size: 2vh;
+                text-align: center;
+            }
+        }
+
+        .content-seguir{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 1vh;
+
+            .content-seguir-uno{
+                display: flex;
+                flex-wrap: wrap;
+                gap: 2vh;
+            }
+
+            .I{
+                color: var(--color-quinto);
+                font-size: 2vh;
+                text-align: center;
+            }
+
+        }
+    }
+
+    #btn-subir {
+        position: fixed;  /* Fijado en la parte inferior */
+        bottom: 50%;
+        right: 20px;
+        width: 6vh;
+        height: 6vh;
+        border-radius: 50%;  /* Botón redondo */
+        color: white;
+        display: none;  /* Inicia como oculto */
+        transition: opacity 0.3s, transform 0.3s;
+        z-index: 900;  /* Asegúrate de que esté por encima de otros elementos */
+        border-color: transparent;
+        cursor: pointer;
+        background-color: rgba(0, 0, 0, 0.219);
+
+        .svg{
+            width: 3vh;
+            height: 3vh;
+        }
+    }
+    
+    #btn-subir:hover {
+        background-color: rgba(0, 0, 0, 0.137) ;  /* Color de hover */
+        transform: scale(1.1);  /* Efecto de hover */
+    }
+    
+
+}
+
+
+/* Media Queries */
+@media (max-width: 1200px) {
+
+    .content-portada-principal {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        align-content: center;
+        height: 100vh;
+        gap: 5svh;
+        justify-content: center;
+
+        .content-nombre {
+            width: 100%;
+            height: auto;
+
+            .content-nombre-lbl {
+                width: auto;
+                height: 100%;
+                display: grid;
+                text-align: center;
+                align-content: center;
+                justify-items: center;
+                gap: 10px;
+
+                #lbl-content-nombre-uno {
+                    color: var(--color-quinto);
+                    font-size: 3vh;
+                }
+            
+                #lbl-content-nombre-dos {
+                    color: var(--color-primario);
+                    font-size: 3vh;
+                    background-color: var(--color-cuarto);
+                    padding: 0px 70px 0px 70px;
+                }
+            
+                #lbl-content-nombre-tres {
+                    width: 80%;
+                    color: var(--color-quinto);
+                    font-size: 2svh;
+                    word-wrap: break-word;
+                    font-style: italic;
+                }
+            }
+        
+        }
+    }
+    
+    .content-fotos {
+        width: 100%;
+        height: 50%;
+    }
+
+    .content-vision-mision {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        gap: 20px;
+
+        .content-mision {
+            width: 100%;
+            height: 50%;
+
+            .content-mision-lbl{
+                width: 100%;
+                height: 100%;
+
+            }
+        }
+    
+        .content-vision {
+            width: 100%;
+            height: 50%;
+
+            .content-vision-lbl{
+                width: 100%;
+                height: 100%;
+
+            }
+        }
+    }
+
+    .content-referencia-uno{
+        display: grid;
+        width: 100%;
+    }
+
+    .content-barra-navegacion{
+        background-color: rgba(255, 255, 255, 0.9);
+    }
+}
+
+@media (min-width: 1200px) {
+    .content-portada-principal {
+        display: flex;
+        align-items: center;
+        height: 70vh;
+
+        .content-nombre {
+            width: 50%;
+            height: 100%;
+
+            .content-nombre-lbl {
+                width: 100%;
+                height: 100%;
+                display: grid;
+                align-content: center;
+                gap: 25px;
+
+                #lbl-content-nombre-uno {
+                    color: var(--color-quinto);
+                    font-size: 5vh;
+                    padding: 0px 70px 0px 70px;
+                }
+            
+                #lbl-content-nombre-dos {
+                    color: var(--color-primario);
+                    font-size: 5vh;
+                    background-color: var(--color-cuarto);
+                    padding: 0px 70px 0px 20px;
+                    margin-left: 3vh;
+                }
+            
+                #lbl-content-nombre-tres {
+                    color: var(--color-quinto);
+                    font-size: 2svh;
+                    padding: 0px 70px 0px 70px;
+                    font-style: italic;
+                }
+            }
+        }
+    }
+
+    .content-vision-mision {
+        display: flex;
+        height: 50vh;
+
+        .content-mision {
+            width: 50%;
+            height: 100%;
+
+            .content-mision-lbl{
+                width: 70%;
+                height: auto;
+                padding: 30px;
+
+            }
+        }
+    
+        .content-vision {
+            width: 50%;
+            height: 100%;
+
+            .content-vision-lbl{
+                width: 70%;
+                height: auto;
+                padding: 30px;
+
+            }
+        }
+    }
+
+    .content-referencia-uno{
+        display: flex;
+        width: 80%;
+    }
+
+    .content-barra-navegacion{
+        background-color: transparent;
+    }
+}
+
+

@@ -1,0 +1,20 @@
+.social-button {
+    width: 7vh;
+    height: 7vh;
+    font-size: 3vh; /* Tamaño más grande para los iconos */
+    border: none;
+    border-radius: 50%; /* Hacer los botones circulares */
+    cursor: pointer;
+    background-color: transparent; /* Fondo transparente */
+    color: black; /* Color negro para los iconos */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.social-button:hover {
+    transform: scale(1.1);
+    background-color: #f0f0f0; /* Fondo claro cuando se pasa el mouse */
+}
+
+a {
+    text-decoration: none;
+}

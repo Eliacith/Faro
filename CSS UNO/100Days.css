@@ -1,0 +1,102 @@
+:root {
+    --length: 128px; /* Tamaño de cada imagen */
+    --space: 4px;    /* Espacio entre imágenes */
+    --border-radius: 8px; /* Bordes redondeados */
+    --transition-time: 0.5s; /* Duración de las transiciones */
+    --scale-factor: 1.5; /* Factor de escala para la imagen activa */
+    --frame-width: 60vw; /* Ancho del contenedor */
+    --frame-height: 60vh; /* Alto del contenedor */
+}
+
+.frame {
+    position: relative;
+    width: var(--frame-width);
+    height: var(--frame-height);
+    overflow: hidden;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pics {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: var(--space); /* Espaciado entre imágenes */
+    margin: 30px;
+}
+
+.pic {
+    position: relative;
+    cursor: pointer; /* Cursor tipo puntero al sobrevolar imágenes */
+    background: #000; /* Fondo de las imágenes */
+    transition: transform var(--transition-time), opacity var(--transition-time);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    flex: 1 1 48%; /* Ajusta el tamaño de las imágenes para 2x2 */
+    height: 48%; /* Mantiene las imágenes de igual tamaño */
+    max-width: 48%; /* Limita el ancho máximo de cada imagen */
+}
+
+.pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: opacity var(--transition-time), transform var(--transition-time);
+}
+
+.pic.active {
+    transform: scale(var(--scale-factor)); /* Escala la imagen activa */
+    z-index: 2; /* La imagen activa está en frente */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(var(--scale-factor));
+}
+
+.pic.away {
+    opacity: 0;
+    pointer-events: none; /* No interactuar con imágenes no activas */
+}
+
+/* Media Queries para un diseño responsive */
+
+@media (max-width: 1200px) {
+    .frame {
+        width: 80%; /* Contenedor ocupa el 80% del viewport */
+        height: 60%;
+    }
+
+    .pic {
+        flex: 1 1 48%; /* En pantallas medianas, mantiene la distribución 2x2 */
+        height: 48%;
+    }
+}
+
+@media (max-width: 768px) {
+    .frame {
+        width: 100%; /* Contenedor ocupa el 90% del viewport */
+        height: 60%;
+    }
+
+    .pic {
+        flex: 1 1 48%; /* En pantallas pequeñas, mantiene la distribución 2x2 */
+        height: 48%;
+    }
+}
+
+@media (max-width: 480px) {
+    .frame {
+        width: 100%; /* Contenedor ocupa el 95% del viewport */
+        height: 50%;
+    }
+
+    .pic {
+        flex: 1 1 48%; /* En pantallas móviles, mantiene la distribución 2x2 */
+        height: 48%;
+    }
+}
